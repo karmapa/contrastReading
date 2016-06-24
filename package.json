@@ -4,7 +4,7 @@
   "description": "contrast reading ui",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --progress --colors --hot --inline"
   },
   "repository": {
     "type": "git",
@@ -14,7 +14,7 @@
     "contrast",
     "reading"
   ],
-  "author": "",
+  "author": "karmapa",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/karmapa/contrastReading/issues"
