@@ -9,7 +9,7 @@ npm install
 
 
 ####pack
-It will pack js files in "src" and export to "dist" folder.
+It will pack files and export to "dist" folder.
 ```
 npm install webpack --global
 webpack
