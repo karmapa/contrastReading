@@ -1,0 +1,44 @@
+#main {
+  margin: 1em;
+  margin-top: 0.1em;
+}
+#title {
+  font-size: 3em;
+}
+
+#textTop {
+  display: flex;
+  border-style: double none none none;
+  border-width: 0.4em;
+  border-color: #A3C7B3;
+  padding-top: 0.2em;
+  padding-bottom: 0.5em;
+}
+
+#textMiddle {
+  display: flex;
+  border-style: double none none none;
+  border-width: 0.4em;
+  border-color: #A3C7B3;
+  padding-top: 0.2em;
+  padding-bottom: 0.5em;
+}
+
+#textBottom {
+  display: flex;
+  border-style: double none none none;
+  border-width: 0.4em;
+  border-color: #A3C7B3;
+  padding-top: 0.2em;
+  padding-bottom: 0.5em;
+}
+
+.textTitle {
+  flex: 1;
+  overflow: auto;
+}
+
+.textContent {
+  flex: 7;
+  overflow: auto;
+}
