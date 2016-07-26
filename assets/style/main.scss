@@ -1,10 +1,11 @@
 #main {
   margin: 1em;
   margin-top: 0em;
-  height: 100vh;
+  height: calc(100vh - 2.3em);
 }
 
 #title {
+  height: 1.5em;
   font-size: 1.5em;
 }
 
@@ -41,11 +42,12 @@
 
 .textTitle {
   flex: 1;
-  height: calc(32vh - 0.5em);
+  height: calc(33vh - 1.9em);
   overflow: auto;
 }
 
 .textContent {
   flex: 7;
+  height: calc(33vh - 1.9em);
   overflow: auto;
 }
