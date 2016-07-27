@@ -51,3 +51,10 @@
   height: calc(33vh - 1.9em);
   overflow: auto;
 }
+
+tc:hover {
+  -webkit-user-select: none;
+  cursor: pointer;
+  background-color: #DDDDDD;
+  color: #000000;
+}
