@@ -1,10 +1,10 @@
 import React from 'react';
-  
+
 const gocara80 = <span>
   大方廣佛華嚴經卷第十四
   于闐國三藏實叉難陀奉　制譯
   淨行品第十一
-  <tc className="_1-1">爾時</tc>，<tc className="_1-3">智首</tc><tc className="_1-2">菩薩</tc>問<tc className="_1-4">文殊師利</tc><tc className="_1-5">言</tc>：「<tc className="_1-6">佛子</tc>！
+  <tc className="_1-1 _80">爾時</tc>，<tc className="_1-3">智首</tc><tc className="_1-2">菩薩</tc>問<tc className="_1-4">文殊師利</tc><tc className="_1-5">言</tc>：「<tc className="_1-6">佛子</tc>！
   <tc className="_1-7">菩薩</tc><tc className="_1-8">云何</tc><tc className="_1-9">得無過失身、語、意業</tc>？<tc className="_1-12">云何得不害身、
   語、意業</tc>？<tc className="_1-11">云何得不可毀身、語、
   意業</tc>？<tc className="_1-10">云何得不可壞身、語、意業</tc>？<tc className="_1-13">云何得不退轉身、語、
