@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {gocaraLJ, gocara80, gocara60} from '../../assets/data/GocaraText.js';
+import {gocaraLJ, gocara80, gocara60} from '../../assets/data/gocaraText.js';
 
 class App extends Component {
   click(e) {
@@ -17,13 +17,11 @@ class App extends Component {
   }
 
   render() {
-    const test = <button onClick={this.scrollTo}>click</button>;
     return (
       <div id="main">
         <header id="title">
           Tibetain-Chinese Sutra Contrast Reading UI on Gocaraparisuddhi
-        <button onClick={this.scrollTo}>test</button>
-        {test}
+          <button onClick={this.scrollTo}>test</button>
         </header>
         <div id="text">
           <div id="textTop">
