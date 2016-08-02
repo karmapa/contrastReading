@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {gocaraLJ, gocara80, gocara60} from '../../assets/data/gocaraText.js';
+import {GocaraLJ, Gocara80, Gocara60} from '../../assets/data/GocaraText.js';
 
 class App extends Component {
   click(e) {
@@ -29,7 +29,7 @@ class App extends Component {
               <span>麗江大藏經</span>
             </div>
             <div id="textTopContent" className="textContent">
-              {gocaraLJ}
+              <GocaraLJ />
             </div>
           </div>
           <div id="textMiddle">
@@ -37,7 +37,7 @@ class App extends Component {
               <span>八十華嚴</span>
             </div>
             <div id="textTopContent" className="textContent">
-              {gocara80}
+              <Gocara80 />
             </div>
           </div>
           <div id="textBottom">
@@ -45,7 +45,7 @@ class App extends Component {
               <span>六十華嚴</span>
             </div>
             <div id="textTopContent" className="textContent">
-              {gocara60}
+              <Gocara60 />
             </div>
           </div>
         </div>
