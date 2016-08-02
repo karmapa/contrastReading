@@ -1,9 +1,9 @@
-import gocaraLJ from './gocaraLJ.js';
-import gocara80 from './gocara80.js';
-import gocara60 from './gocara60.js';
+import GocaraLJ from './GocaraLJ.js';
+import Gocara80 from './Gocara80.js';
+import Gocara60 from './Gocara60.js';
 
 export {
-  gocaraLJ,
-  gocara80,
-  gocara60
+  GocaraLJ,
+  Gocara80,
+  Gocara60
 };
