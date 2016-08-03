@@ -1,17 +1,18 @@
 import React, {Component} from 'react';
-import {GocaraLJ, Gocara80, Gocara60} from '../../assets/data/GocaraText.js';
+import {connect} from 'react-redux';
+import {GocaraLJ, Gocara80, Gocara60} from './GocaraText';
 
-class App extends Component {
+class AppContainer extends Component {
   click(e) {
     console.log(e.target);
   }
 
   scrollTo(id) {
-    document.getElementsByClassName('1.121')[0].scrollIntoView();
-    document.getElementsByClassName('1.121')[1].scrollIntoView();
-    document.getElementsByClassName('1.121')[2].scrollIntoView();
-    const a = document.getElementsByClassName('lj')[0];
-    const b = document.getElementsByClassName('1.121')[1];
+    document.getElementsByClassName('_1-121')[0].scrollIntoView();
+    document.getElementsByClassName('_1-121')[1].scrollIntoView();
+    document.getElementsByClassName('_1-121')[2].scrollIntoView();
+    const a = document.getElementsByClassName('gocLJ')[0];
+    const b = document.getElementsByClassName('_1-121')[1];
     console.log(a);
     console.log(b);
   }
@@ -53,4 +54,13 @@ class App extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    contrast: state.contrast
+  };
+};
+
+const App = connect(mapStateToProps)(AppContainer);
+
 export default App;
