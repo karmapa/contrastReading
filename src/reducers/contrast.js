@@ -1,7 +1,8 @@
 const initialState = {
-  clickedId: 0,
-  clickedSutraName: 'no',
-  lastClickedId: 0
+  clickedClassName: 0,
+  clickedSutraName: '',
+  lastClickedClassName: 0,
+  contrastList: ['gocLJ', 'goc80', 'goc60']
 };
 
 const contrast = (state = initialState, action) => {
@@ -11,9 +12,9 @@ const contrast = (state = initialState, action) => {
         const arr = action.e.target.className.split(' ');
         return {
           ...state,
-          clickedId: arr[0],
+          clickedClassName: arr[0],
           clickedSutraName: arr[1],
-          lastClickedId: state.clickedId
+          lastClickedClassName: state.clickedClassName
         };
       } else {
         return {
