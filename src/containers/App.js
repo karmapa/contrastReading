@@ -7,8 +7,17 @@ class AppContainer extends Component {
 
   }
 
+  clearOldHighlight(obj) {
+    if (0 === obj.lastClickedClassName) {
+      return;
+    }
+  }
+
   scrollToId(obj) {
     console.log(obj);
+    if ('' === obj.clickedSutraName) {
+      return;
+    }
     const idx = obj.contrastList.indexOf(obj.clickedSutraName);
     for (let i = 0; i < obj.contrastList.length; i++) {
       if (idx !== i) {
@@ -19,6 +28,7 @@ class AppContainer extends Component {
 
   render() {
     this.scrollToId(this.props.contrast);
+    this.clearOldHighlight(this.props.contrast);
     this.highlight(this.props.contrast);
     return (
       <div id="main">
