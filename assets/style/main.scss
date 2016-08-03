@@ -13,27 +13,8 @@
   height: 100%;
 }
 
-#textTop {
-  cursor: default;
-  display: flex;
-  border-style: double none none none;
-  border-width: 0.4em;
-  border-color: #A3C7B3;
-  padding-top: 0.2em;
-  padding-bottom: 0.5em;
-}
-
-#textMiddle {
-  cursor: default;
-  display: flex;
-  border-style: double none none none;
-  border-width: 0.4em;
-  border-color: #A3C7B3;
-  padding-top: 0.2em;
-  padding-bottom: 0.5em;
-}
-
-#textBottom {
+#textTop, #textMiddle, #textBottom {
+  font-size: 1.2em;
   cursor: default;
   display: flex;
   border-style: double none none none;
@@ -51,6 +32,7 @@
 
 .textContent {
   flex: 7;
+  font-size: 1.5em;
   height: calc(33vh - 1.9em);
   overflow: auto;
 }
