@@ -11,6 +11,10 @@ class AppContainer extends Component {
     if (0 === obj.lastClickedClassName) {
       return;
     }
+    for (let i = 0; i < obj.contrastList.length; i++) {
+//      const a = document.getElementsByClassName(obj.lastClickedClassName)[i].className;
+//      console.log(a);
+    }
   }
 
   scrollToId(obj) {
@@ -20,8 +24,9 @@ class AppContainer extends Component {
     }
     const idx = obj.contrastList.indexOf(obj.clickedSutraName);
     for (let i = 0; i < obj.contrastList.length; i++) {
-      if (idx !== i) {
-        document.getElementsByClassName(obj.clickedClassName)[i].scrollIntoView();
+      const tag = document.getElementsByClassName(obj.clickedClassName)[i];
+      if (idx !== i && tag !== undefined) {
+        tag.scrollIntoView();
       }
     }
   }
