@@ -2,7 +2,8 @@ const initialState = {
   clickedClassName: 0,
   clickedSutraName: '',
   lastClickedClassName: 0,
-  contrastList: ['gocLJ', 'goc80', 'goc60']
+  contrastList: ['gocLJ', 'goc80', 'goc60'],
+  highlight: 'highlight'
 };
 
 const contrast = (state = initialState, action) => {
