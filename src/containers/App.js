@@ -12,20 +12,24 @@ class AppContainer extends Component {
       return;
     }
     for (let i = 0; i < obj.contrastList.length; i++) {
-//      const a = document.getElementsByClassName(obj.lastClickedClassName)[i].className;
-//      console.log(a);
+      const tag = document.getElementsByClassName(obj.lastClickedClassName)[i];
+      if (undefined === tag) {
+        return;
+      }
+      const a = tag.className;
+      tag.className = obj.lastClickedClassName + ' ' + obj.contrastList[i];
+      console.log(a);
     }
   }
 
   scrollToId(obj) {
-    console.log(obj);
     if ('' === obj.clickedSutraName) {
       return;
     }
     const idx = obj.contrastList.indexOf(obj.clickedSutraName);
     for (let i = 0; i < obj.contrastList.length; i++) {
       const tag = document.getElementsByClassName(obj.clickedClassName)[i];
-      if (idx !== i && tag !== undefined) {
+      if (idx !== i && undefined !== tag) {
         tag.scrollIntoView();
       }
     }
