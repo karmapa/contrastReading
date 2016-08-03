@@ -1,7 +1,7 @@
 const initialState = {
-  clickedPB: 0,
+  clickedId: 0,
   clickedSutraName: 'no',
-  lastClickedPb: 0
+  lastClickedId: 0
 };
 
 const contrast = (state = initialState, action) => {
@@ -11,9 +11,9 @@ const contrast = (state = initialState, action) => {
         const arr = action.e.target.className.split(' ');
         return {
           ...state,
-          clickedPB: arr[0],
+          clickedId: arr[0],
           clickedSutraName: arr[1],
-          lastClickedPb: state.clickedPB
+          lastClickedId: state.clickedId
         };
       } else {
         return {
