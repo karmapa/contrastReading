@@ -4,7 +4,17 @@ import {GocaraLJ, Gocara80, Gocara60} from './GocaraText';
 
 class AppContainer extends Component {
   highlight(obj) {
-
+    if (0 === obj.clickedClassName) {
+      return;
+    }
+    for (let i = 0; i < obj.contrastList.length; i++) {
+      const tag = document.getElementsByClassName(obj.clickedClassName)[i];
+      if (undefined === tag) {
+        return;
+      }
+      const a = tag.className;
+      tag.className = obj.clickedClassName + ' ' + obj.contrastList[i] + ' ' + 'highlight';
+    }
   }
 
   clearOldHighlight(obj) {
@@ -18,7 +28,6 @@ class AppContainer extends Component {
       }
       const a = tag.className;
       tag.className = obj.lastClickedClassName + ' ' + obj.contrastList[i];
-      console.log(a);
     }
   }
 
