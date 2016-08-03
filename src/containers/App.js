@@ -12,8 +12,8 @@ class AppContainer extends Component {
       if (undefined === tag) {
         return;
       }
-      const a = tag.className;
-      tag.className = obj.clickedClassName + ' ' + obj.contrastList[i] + ' ' + 'highlight';
+      tag.className = obj.clickedClassName + ' ' + obj.contrastList[i]
+                      + ' ' + obj.highlight;
     }
   }
 
@@ -26,7 +26,6 @@ class AppContainer extends Component {
       if (undefined === tag) {
         return;
       }
-      const a = tag.className;
       tag.className = obj.lastClickedClassName + ' ' + obj.contrastList[i];
     }
   }
