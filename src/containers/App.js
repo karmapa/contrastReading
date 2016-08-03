@@ -48,35 +48,35 @@ class AppContainer extends Component {
     this.clearOldHighlight(this.props.contrast);
     this.highlight(this.props.contrast);
     return (
-      <div id="main">
+      <div>
         <header id="title">
           Tibetain-Chinese Sutra Contrast Reading UI on Gocaraparisuddhi
         </header>
-        <div id="text">
-          <div id="textTop">
-            <div id="textTopTitle" className="textTitle">
+        <div id="main">
+          <span id="gocLJRender">
+            <div id="gocLJTitle">
               <span>麗江大藏經</span>
             </div>
-            <div id="textTopContent" className="textContent">
+            <div id="gocLJContent">
               <GocaraLJ />
             </div>
-          </div>
-          <div id="textMiddle">
-            <div id="textTopTitle" className="textTitle">
+          </span>
+          <span id="goc80Render">
+            <div id="goc80Title">
               <span>八十華嚴</span>
             </div>
-            <div id="textTopContent" className="textContent">
+            <div id="goc80Content">
               <Gocara80 />
             </div>
-          </div>
-          <div id="textBottom">
-            <div id="textTopTitle" className="textTitle">
+          </span>
+          <span id="goc60Render">
+            <div id="goc60Title">
               <span>六十華嚴</span>
             </div>
-            <div id="textTopContent" className="textContent">
+            <div id="goc60Content">
               <Gocara60 />
             </div>
-          </div>
+          </span>
         </div>
       </div>
     );
