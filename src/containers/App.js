@@ -3,26 +3,27 @@ import {connect} from 'react-redux';
 import {GocaraLJ, Gocara80, Gocara60} from './GocaraText';
 
 class AppContainer extends Component {
-  click(e) {
-    console.log(e.target);
+  highlight(obj) {
+
   }
 
-  scrollTo(id) {
-    document.getElementsByClassName('_1-121')[0].scrollIntoView();
-    document.getElementsByClassName('_1-121')[1].scrollIntoView();
-    document.getElementsByClassName('_1-121')[2].scrollIntoView();
-    const a = document.getElementsByClassName('gocLJ')[0];
-    const b = document.getElementsByClassName('_1-121')[1];
-    console.log(a);
-    console.log(b);
+  scrollToId(obj) {
+    console.log(obj);
+    const idx = obj.contrastList.indexOf(obj.clickedSutraName);
+    for (let i = 0; i < obj.contrastList.length; i++) {
+      if (idx !== i) {
+        document.getElementsByClassName(obj.clickedClassName)[i].scrollIntoView();
+      }
+    }
   }
 
   render() {
+    this.scrollToId(this.props.contrast);
+    this.highlight(this.props.contrast);
     return (
       <div id="main">
         <header id="title">
           Tibetain-Chinese Sutra Contrast Reading UI on Gocaraparisuddhi
-          <button onClick={this.scrollTo}>test</button>
         </header>
         <div id="text">
           <div id="textTop">
