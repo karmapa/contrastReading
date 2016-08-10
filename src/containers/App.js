@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PanelLeft from './PanelLeft.js';
-import PanelCenter from './PanelCenter.js';
+import PanelMiddle from './PanelMiddle.js';
 import PanelRight from './PanelRight.js';
 
 class AppContainer extends Component {
@@ -56,7 +56,7 @@ class AppContainer extends Component {
         </header>
         <div id="main">
           <PanelLeft />
-          <PanelCenter />
+          <PanelMiddle />
           <PanelRight />
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Gocara80} from './GocaraText';
 
-class PanelCenter extends Component {
+class PanelMiddle extends Component {
   render() {
     return (
         <span id="goc80Render">
@@ -16,4 +16,4 @@ class PanelCenter extends Component {
   }
 }
 
-export default PanelCenter;
+export default PanelMiddle;
