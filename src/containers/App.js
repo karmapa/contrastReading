@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {GocaraLJ, Gocara80, Gocara60} from './GocaraText';
+import PanelLeft from './PanelLeft.js';
+import PanelCenter from './PanelCenter.js';
+import PanelRight from './PanelRight.js';
 
 class AppContainer extends Component {
   highlight(obj) {
@@ -53,30 +55,9 @@ class AppContainer extends Component {
           Tibetain-Chinese Sutra Contrast Reading UI on Gocaraparisuddhi
         </header>
         <div id="main">
-          <span id="gocLJRender">
-            <div id="gocLJTitle">
-              <span>麗江大藏經</span>
-            </div>
-            <div id="gocLJContent">
-              <GocaraLJ />
-            </div>
-          </span>
-          <span id="goc80Render">
-            <div id="goc80Title">
-              <span>八十華嚴</span>
-            </div>
-            <div id="goc80Content">
-              <Gocara80 />
-            </div>
-          </span>
-          <span id="goc60Render">
-            <div id="goc60Title">
-              <span>六十華嚴</span>
-            </div>
-            <div id="goc60Content">
-              <Gocara60 />
-            </div>
-          </span>
+          <PanelLeft />
+          <PanelCenter />
+          <PanelRight />
         </div>
       </div>
     );
