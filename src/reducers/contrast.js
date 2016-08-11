@@ -7,7 +7,8 @@ const initialState = {
   panelLeft: true,
   panelMiddle: true,
   panelRight: true,
-  activatedPanel: 3
+  activatedPanel: 3,
+  elementClientY: 0
 };
 
 const contrast = (state = initialState, action) => {
@@ -19,7 +20,8 @@ const contrast = (state = initialState, action) => {
           ...state,
           clickedClassName: arr[0],
           clickedSutraName: arr[1],
-          lastClickedClassName: state.clickedClassName
+          lastClickedClassName: state.clickedClassName,
+          elementClientY: action.e.clientY
         };
       } else {
         return {

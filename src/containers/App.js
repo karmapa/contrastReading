@@ -41,8 +41,11 @@ class AppContainer extends Component {
       const tag = document.getElementsByClassName(obj.clickedClassName)[i];
       if (idx !== i && undefined !== tag) {
         tag.scrollIntoView();
+        let tagScrolledHeight = document.getElementById(obj.contrastList[i] + 'Content').scrollTop;
+        document.getElementById(obj.contrastList[i] + 'Content').scrollTop = tagScrolledHeight - obj.elementClientY + 80;
       }
     }
+    console.log('end');
   }
 
   render() {
