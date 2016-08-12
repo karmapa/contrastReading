@@ -45,7 +45,6 @@ class AppContainer extends Component {
         document.getElementById(obj.contrastList[i] + 'Content').scrollTop = tagScrolledHeight - obj.elementClientY + 80;
       }
     }
-    console.log('end');
   }
 
   render() {
