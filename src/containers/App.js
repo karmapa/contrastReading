@@ -47,6 +47,12 @@ class AppContainer extends Component {
     }
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return (
+      nextProps.contrast.clickedClassName !== this.props.contrast.clickedClassName
+    );
+  }
+
   render() {
     this.scrollToId(this.props.contrast);
     this.clearOldHighlight(this.props.contrast);
