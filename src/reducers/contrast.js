@@ -7,8 +7,22 @@ const initialState = {
   panelLeft: true,
   panelMiddle: true,
   panelRight: true,
-  activatedPanel: 3,
+  activatedPanel: ['gocLJ', 'goc80', 'goc60'],
   elementClientY: 0
+};
+
+const definedActivatedPanel = (left, middle, right, list) => {
+  let arr = [];
+  if (true === left) {
+    arr.push(list[0]);
+  }
+  if (true === middle) {
+    arr.push(list[1]);
+  }
+  if (true === right) {
+    arr.push(list[2]);
+  }
+  return arr;
 };
 
 const contrast = (state = initialState, action) => {
@@ -36,15 +50,17 @@ const contrast = (state = initialState, action) => {
           panelLeft: true
         };
       } else if (true === state.panelLeft) {
+        const arr = definedActivatedPanel(!state.panelLeft, state.panelMiddle, state.panelRight, state.contrastList);
         return {
           ...state,
-          activatedPanel: --state.activatedPanel,
+          activatedPanel: arr,
           panelLeft: !state.panelLeft
         };
       } else {
+        const arr = definedActivatedPanel(!state.panelLeft, state.panelMiddle, state.panelRight, state.contrastList);
         return {
           ...state,
-          activatedPanel: ++state.activatedPanel,
+          activatedPanel: arr,
           panelLeft: !state.panelLeft
         };
       }
@@ -55,15 +71,17 @@ const contrast = (state = initialState, action) => {
           panelMiddle: true
         };
       } else if (true === state.panelMiddle) {
+        const arr = definedActivatedPanel(state.panelLeft, !state.panelMiddle, state.panelRight, state.contrastList);
         return {
           ...state,
-          activatedPanel: --state.activatedPanel,
+          activatedPanel: arr,
           panelMiddle: !state.panelMiddle
         };
       } else {
+        const arr = definedActivatedPanel(state.panelLeft, !state.panelMiddle, state.panelRight, state.contrastList);
         return {
           ...state,
-          activatedPanel: ++state.activatedPanel,
+          activatedPanel: arr,
           panelMiddle: !state.panelMiddle
         };
       }
@@ -74,15 +92,17 @@ const contrast = (state = initialState, action) => {
           panelRight: true
         };
       } else if (true === state.panelRight) {
+        const arr = definedActivatedPanel(state.panelLeft, state.panelMiddle, !state.panelRight, state.contrastList);
         return {
           ...state,
-          activatedPanel: --state.activatedPanel,
+          activatedPanel: arr,
           panelRight: !state.panelRight
         };
       } else {
+        const arr = definedActivatedPanel(state.panelLeft, state.panelMiddle, !state.panelRight, state.contrastList);
         return {
           ...state,
-          activatedPanel: ++state.activatedPanel,
+          activatedPanel: arr,
           panelRight: !state.panelRight
         };
       }

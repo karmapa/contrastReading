@@ -13,14 +13,14 @@ class PanelRightContainer extends Component {
   render() {
     let panelWidth = '33%';
     let resizable = true;
-    if (1 === this.props.contrast.activatedPanel) {
+    if (1 === this.props.contrast.activatedPanel.length) {
       panelWidth = '100%';
       resizable = false;
-    } else if (2 === this.props.contrast.activatedPanel) {
+    } else if (2 === this.props.contrast.activatedPanel.length) {
       panelWidth = '50%';
     }
     if (this.props.contrast.panelRight) {
-      if ((2 === this.props.contrast.activatedPanel && this.props.contrast.panelLeft) || 1 === this.props.contrast.activatedPanel) {
+      if ((2 === this.props.contrast.activatedPanel.length && this.props.contrast.panelLeft) || 1 === this.props.contrast.activatedPanel.length) {
         return (
           <span id="goc60Render">
             <div id="goc60Title" onClick={this.panelSwitcher}>六十華嚴</div>

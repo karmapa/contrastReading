@@ -13,10 +13,10 @@ class PanelLeftContainer extends Component {
   render() {
     let panelWidth = '33%';
     let resizable = true;
-    if (1 === this.props.contrast.activatedPanel) {
+    if (1 === this.props.contrast.activatedPanel.length) {
       panelWidth = '100%';
       resizable = false;
-    } else if (2 === this.props.contrast.activatedPanel) {
+    } else if (2 === this.props.contrast.activatedPanel.length) {
       panelWidth = '50%';
     }
     if (this.props.contrast.panelLeft) {
