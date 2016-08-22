@@ -9,13 +9,12 @@ class AppContainer extends Component {
     if (0 === obj.clickedClassName) {
       return;
     }
-    for (let i = 0; i < obj.contrastList.length; i++) {
+    for (let i = 0; i < obj.activatedPanel.length; i++) {
       const tag = document.getElementsByClassName(obj.clickedClassName)[i];
       if (undefined === tag) {
         return;
       }
-      tag.className = obj.clickedClassName + ' ' + obj.contrastList[i]
-                      + ' ' + obj.highlight;
+      tag.className = tag.className + ' ' + obj.highlight;
     }
   }
 
@@ -23,12 +22,12 @@ class AppContainer extends Component {
     if (0 === obj.lastClickedClassName) {
       return;
     }
-    for (let i = 0; i < obj.contrastList.length; i++) {
+    for (let i = 0; i < obj.activatedPanel.length; i++) {
       const tag = document.getElementsByClassName(obj.lastClickedClassName)[i];
       if (undefined === tag) {
         return;
       }
-      tag.className = obj.lastClickedClassName + ' ' + obj.contrastList[i];
+      tag.className = tag.className.replace(' ' + obj.highlight, '');
     }
   }
 
@@ -36,20 +35,21 @@ class AppContainer extends Component {
     if ('' === obj.clickedSutraName) {
       return;
     }
-    const idx = obj.contrastList.indexOf(obj.clickedSutraName);
-    for (let i = 0; i < obj.contrastList.length; i++) {
+    const idx = obj.activatedClassName.indexOf(obj.clickedSutraName);
+    for (let i = 0; i < obj.activatedClassName.length; i++) {
       const tag = document.getElementsByClassName(obj.clickedClassName)[i];
       if (idx !== i && undefined !== tag) {
         tag.scrollIntoView();
-        let tagScrolledHeight = document.getElementById(obj.contrastList[i] + 'Content').scrollTop;
-        document.getElementById(obj.contrastList[i] + 'Content').scrollTop = tagScrolledHeight - obj.elementClientY + 80;
+        let tagScrolledHeight = document.getElementById(obj.activatedClassName[i] + 'Content').scrollTop;
+        document.getElementById(obj.activatedClassName[i] + 'Content').scrollTop = tagScrolledHeight - obj.elementClientY + 80;
       }
     }
   }
 
   shouldComponentUpdate(nextProps, nextState) {
     return (
-      nextProps.contrast.clickedClassName !== this.props.contrast.clickedClassName
+      (nextProps.contrast.clickedClassName !== this.props.contrast.clickedClassName) ||
+      (nextProps.contrast.elementClientY !== this.props.contrast.elementClientY)
     );
   }
 

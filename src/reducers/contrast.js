@@ -8,6 +8,7 @@ const initialState = {
   panelMiddle: true,
   panelRight: true,
   activatedPanel: ['gocLJ', 'goc80', 'goc60'],
+  activatedClassName: [],
   elementClientY: 0
 };
 
@@ -35,7 +36,8 @@ const contrast = (state = initialState, action) => {
           clickedClassName: arr[0],
           clickedSutraName: arr[1],
           lastClickedClassName: state.clickedClassName,
-          elementClientY: action.e.clientY
+          elementClientY: action.e.clientY,
+          activatedClassName: action.tagsArr
         };
       } else {
         return {
@@ -113,10 +115,11 @@ const contrast = (state = initialState, action) => {
 
 export default contrast;
 
-export function sutraClicked(e) {
+export function sutraClicked(e, arr) {
   return {
     type: 'SUTRACLICKED',
-    e: e
+    e: e,
+    tagsArr: arr
   };
 }
 
