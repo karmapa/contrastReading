@@ -13,8 +13,8 @@ RUN n 5.9.0
 RUN mkdir contrastReading
 COPY . contrastReading/
 WORKDIR contrastReading
-Run npm rebuild node-sass
+RUN npm rebuild node-sass
 
 EXPOSE 8080
 
-CMD ["npm", "test"]
+CMD ["npm", "dev"]
