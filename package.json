@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --progress --colors --hot --inline",
-    "build": "webpack"
+    "build": "./bin/build.sh",
+    "start": "./bin/start.sh"
   },
   "repository": {
     "type": "git",
