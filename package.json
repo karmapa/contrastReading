@@ -4,9 +4,9 @@
   "description": "contrast reading ui",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --progress --colors --hot --inline",
-    "build": "./bin/build.sh",
-    "start": "./bin/start.sh"
+    "dev": "webpack-dev-server --progress --host 0.0.0.0 --colors --hot --inline",
+    "build-image": "./bin/build.sh",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
